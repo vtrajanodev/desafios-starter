@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="logo">myFinances</header>
+
+    <main>
+        <section id="incomes">
+            <h3>Entrada</h3>
+
+            <div class="input-group">
+                <label for="income-aria"></label>
+                <input type="number" id="income-aria" placeholder="R$ 0,00" name="income-aria">
+            </div>
+        </section>
+
+        <section id="expenses">
+            <h3>Saída:</h3>
+
+            <div class="input-group">
+                <label for="expense-aria"></label>
+                <input type="number" placeholder="R$ 0,00" id="expense-aria" name="expense-aria">
+            </div>
+
+            <div id="buttons">
+                <button type="button" id="calculate" class="button">Calcular</button>
+            </div>
+
+            <div class="input-group">
+                <label for="result-aria">Resultado: </label>
+                <input type="text" placeholder="R$ 0,00" id="result-aria" name="result-aria">
+            </div>
+
+
+        </section>
+    </main>
+
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
