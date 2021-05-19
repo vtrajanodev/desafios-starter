@@ -36,59 +36,65 @@ const booksByCategory = [
     }
 ]
 
+// Imprimir a qauntidade de categorias
 const totalCategories = booksByCategory.length
-
 console.log(`O total de categorias é ${totalCategories}`)
 
 
 
-
+// Imprime a quantidade de livros por categoria
 for (const category of booksByCategory) {
-    console.log(`${category.category}:`)
-    console.log(category.books.length)
+    console.log(`${category.category}:`) // Riqueza / Inteligência emocional
+    console.log(category.books.length) // Quantidade por categoria (3) , (3)
     
 }
 
 
+//Função para definir quantidade de autores
 function countAuthors(){
 
-    let authors = []
+    let authors = [] // Iniciando array vazio
 
-    for (let category of booksByCategory) {
+    //1° LOOP para acessar o OBJETO GERAL
+    for (let category of booksByCategory){
+        //Segundo loop para acessar o objeto referente aos titulos e autores
         for (let book of category.books) {
-           if(authors.indexOf(book.author) == -1){
-                authors.push(book.author)
+           if(authors.indexOf(book.author) == -1){ //validação para não contar autores repetidos
+                authors.push(book.author) //adicionando autores encontrados no array
            }
             
         }
     }   
 
-    console.log("Total de autores:", authors.length)
+    console.log("Total de autores:", authors.length) //Imprimindo total de autores
 }
 
-countAuthors()
+countAuthors() //rodando a função
 
 
+//Função para listar os livros com base no autor
 function searchBooks(author){
+
+    author.toLowerCase()
 
     let livros = []
 
-    for (const category of booksByCategory){
+    for (const category of booksByCategory) {
         for (const book of category.books) {
-           if(book.author === author){
-               livros.push(book.title)
-           }
+            if(book.author.toLowerCase() == author){
+                livros.push(book.title)
+            }
         }
     }
 
-    
+    if(livros == 0){
+        console.log("Autor não encontrado")
+    }else{
+        console.log(`O autor: ${author} tem os títulos: 
+        ${livros} registrados na plataforma`)
+    }
 
-    console.log(`Livros do autor ${author}: (${livros.length})
-    ${livros}`)
-
-}   
+}
 
 
-
-searchBooks("Augusto Cury")
-
+searchBooks("stephen r. covey")

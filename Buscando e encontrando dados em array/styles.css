@@ -1,0 +1,108 @@
+/*Configurações gerais*/
+:root{
+    --principal-color: rgb(71, 151, 255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Body*/
+
+body{
+    font-family: 'KoHo', sans-serif;
+    font-size: 16px;
+}
+
+/*Header*/
+
+header{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background: linear-gradient(to left, rgb(122, 122, 122), var(--principal-color));
+    height: 3.5rem;    
+}
+
+header h2{
+    font-size: 1.7rem;
+}
+
+/* Navigation Bar */
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    
+}
+
+nav ul li{
+    margin: .5rem 2.5rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    font-weight: bold;
+}
+
+/* Section category */
+
+section a{
+    text-decoration: none;
+    color: black;
+}
+
+section#category {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    height: auto;
+}
+section#category h2{
+   text-align: center;
+   display: block;
+   margin: 3rem auto;
+   color: var(--principal-color);
+}
+
+section#category ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section#category ul li{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+section#category ul li:hover{
+    
+    font-weight: bold;
+}
+
+/* Section beRich */
+
+section#beRich{
+    width: 100%;
+    height: auto;
+    background-color: rgb(235, 255, 122);
+}
+
+section#beRich h2{
+    display: block;
+    text-align: center;
+    margin: 3rem 0 ;
+}
+
